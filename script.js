@@ -27,6 +27,9 @@ function handleYesClick() {
 
 function confettiFunc() {
     const yesButton = document.querySelector('.yes-button');
+    const messages = ["I love youuu, my babyyy😚🤍"];
+
+    yesButton.textContent = messages[messageIndex];
     yesButton.addEventListener("click", () => {
         const defaults = {
             spread: 360,
