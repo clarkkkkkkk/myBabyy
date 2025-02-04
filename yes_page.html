@@ -1,17 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Knew you would say yes!</title>
+    <title>For my baby only</title>
+    <link rel="icon" href="img/catcute.jpg">
     <link rel="stylesheet" href="./yes_style.css">
 </head>
+
 <body>
     <div class="container">
-        <h1 class="header_text">Knew you would say yes!</h1>
+        <h1 class="header_text">Yeyyyyy!😁</h1>
         <div class="gif_container">
-            <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmo3c3l5ODh3ZGN6NHhhaDE2Mjg1ZjkwOXczdDFxbWM3dTBtaW9zaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/9XY4f3FgFTT4QlaYqa/giphy.gif">
+            <img
+                src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2UydXNwdng1aTZraWF1eXcwb2p3NmdhaHN4bXQ0dHVvcGFza3hlaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Fu3OjBQiCs3s0ZuLY3/giphy.gif">
         </div>
+        <h1 class="header_text">See you soon, babyyy😚</h1>
+        <button class="yes-button" onclick="confettiFunc()">CLICK ME</button>
     </div>
 </body>
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+
+<script>
+    const yesBtn = document.querySelector(".yes-button");
+
+    yesBtn.addEventListener("click", () => {
+        const defaults = {
+            spread: 360,
+            ticks: 100,
+            gravity: 0,
+            decay: 0.94,
+            startVelocity: 30,
+            shapes: ["heart"],
+            colors: ["FFC0CB", "FF69B4", "FF1493", "C71585"],
+        };
+
+        confetti({
+            ...defaults,
+            particleCount: 50,
+            scalar: 2,
+        });
+
+        confetti({
+            ...defaults,
+            particleCount: 25,
+            scalar: 3,
+        });
+
+        confetti({
+            ...defaults,
+            particleCount: 10,
+            scalar: 4,
+        });
+    });
+</script>
+
 </html>
